@@ -1,0 +1,176 @@
+<!--
+Single-file responsive website for "Masak Asik" (Blog Hobi Memasak)
+Usage: save this file as `index.html` and put image files in an `images/` folder.
+Replace `images/cover.jpg` with your uploaded image (e.g. 1000198396.jpg) or any food photo.
+-->
+
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Masak Asik — Blog Hobi Memasak</title>
+  <meta name="description" content="Masak Asik - resep, tips dapur, dan inspirasi masakan untuk sehari-hari." />
+  <style>
+    :root{--accent:#FF7A3D;--fresh:#3CB371;--muted:#6b7280;--bg:#fff}
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;line-height:1.5;margin:0;background:#fafafa;color:#111}
+    header{background:linear-gradient(90deg, rgba(255,122,61,0.08), rgba(60,179,113,0.04));border-bottom:1px solid #eee}
+    .container{max-width:1000px;margin:0 auto;padding:24px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:48px;height:48px;border-radius:8px;overflow:hidden;display:inline-block}
+    .logo img{width:100%;height:100%;object-fit:cover}
+    nav{margin-left:auto}
+    .nav-links{display:flex;gap:14px;align-items:center}
+    .btn{background:var(--accent);color:white;padding:8px 14px;border-radius:8px;text-decoration:none}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr;gap:18px;align-items:center;padding:28px 0}
+    .hero-card{background:white;border-radius:12px;padding:22px;box-shadow:0 8px 20px rgba(0,0,0,0.04)}
+    .hero-grid{display:flex;gap:18px;align-items:center}
+    .hero-text h1{margin:0 0 10px;font-size:28px}
+    .hero-text p{margin:0;color:var(--muted)}
+    .hero-img{width:280px;height:180px;border-radius:10px;overflow:hidden}
+    .hero-img img{width:100%;height:100%;object-fit:cover}
+
+    /* Sections */
+    section{margin-top:22px}
+    h2{font-size:18px;margin:0 0 12px}
+    .card-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .card{background:white;padding:14px;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.03)}
+    .card img{width:100%;height:120px;object-fit:cover;border-radius:8px}
+    .muted{color:var(--muted);font-size:14px}
+
+    footer{margin-top:40px;padding:22px 0;color:var(--muted);text-align:center}
+
+    /* Responsive */
+    @media (min-width:900px){
+      .hero{grid-template-columns:1fr}
+      .card-list{grid-template-columns:repeat(3,1fr)}
+    }
+    @media (max-width:640px){
+      .nav-links{display:none}
+      .hero-img{width:140px;height:120px}
+      .card-list{grid-template-columns:1fr}
+    }
+
+    /* small helpers */
+    .pill{display:inline-block;background:#fff;padding:6px 10px;border-radius:999px;border:1px solid #eee;font-size:13px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container" style="display:flex;align-items:center;">
+      <div class="brand">
+        <div class="logo"><img src="images/cover.jpg" alt="logo"/></div>
+        <div>
+          <div style="font-weight:700">Masak Asik</div>
+          <div style="font-size:13px;color:var(--muted)">Blog Hobi Memasak</div>
+        </div>
+      </div>
+      <nav>
+        <div class="nav-links">
+          <a href="#" class="pill">Beranda</a>
+          <a href="#resep" class="pill">Resep</a>
+          <a href="#tips" class="pill">Tips</a>
+          <a href="#galeri" class="pill">Galeri</a>
+          <a href="#about" class="pill">Tentang</a>
+          <a href="#kontak" class="btn">Kontak</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero-card hero">
+      <div class="hero-grid">
+        <div class="hero-text">
+          <h1>Selamat datang di Masak Asik</h1>
+          <p>Ribuan resep sederhana, tips dapur praktis, dan ide menu harian untuk membuat masak jadi menyenangkan.
+          </p>
+          <div style="margin-top:12px;display:flex;gap:8px">
+            <a href="#resep" class="btn">Lihat Resep Populer</a>
+            <a href="#tips" class="pill">Tips Dapur</a>
+          </div>
+        </div>
+        <div class="hero-img"><img src="images/cover.jpg" alt="foto makanan"/></div>
+      </div>
+    </section>
+
+    <section id="resep">
+      <h2>Resep Pilihan</h2>
+      <div class="card-list">
+        <article class="card">
+          <img src="images/recipe1.jpg" alt="Nasi Goreng"/>
+          <h3 style="margin:8px 0 6px">Nasi Goreng Spesial</h3>
+          <div class="muted">Mudah • 30 menit • Untuk 2 porsi</div>
+        </article>
+
+        <article class="card">
+          <img src="images/recipe2.jpg" alt="Ayam Bakar"/>
+          <h3 style="margin:8px 0 6px">Ayam Bakar Madu</h3>
+          <div class="muted">Sedang • 45 menit • Untuk 4 porsi</div>
+        </article>
+
+        <article class="card">
+          <img src="images/recipe3.jpg" alt="Capcay"/>
+          <h3 style="margin:8px 0 6px">Capcay Sayur</h3>
+          <div class="muted">Mudah • 20 menit • Untuk 3 porsi</div>
+        </article>
+      </div>
+    </section>
+
+    <section id="tips">
+      <h2>Tips Dapur Singkat</h2>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px">
+        <div class="card">
+          <h4>1. Simpan bumbu kering di tempat kedap udara</h4>
+          <p class="muted">Bumbu tetap wangi lebih lama dan tidak cepat rusak.</p>
+        </div>
+        <div class="card">
+          <h4>2. Gunakan minyak panas untuk tumisan</h4>
+          <p class="muted">Mencegah makanan menyerap minyak berlebih dan menempel pada wajan.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeri">
+      <h2>Galeri</h2>
+      <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap">
+        <img src="images/gal1.jpg" style="width:150px;height:100px;object-fit:cover;border-radius:8px"/>
+        <img src="images/gal2.jpg" style="width:150px;height:100px;object-fit:cover;border-radius:8px"/>
+        <img src="images/gal3.jpg" style="width:150px;height:100px;object-fit:cover;border-radius:8px"/>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>Tentang Penulis</h2>
+      <div class="card" style="display:flex;gap:12px;align-items:center">
+        <div style="width:72px;height:72px;border-radius:8px;overflow:hidden"><img src="images/author.jpg" style="width:100%;height:100%;object-fit:cover"/></div>
+        <div>
+          <strong>Annisa Nur Aprillianti</strong>
+          <p class="muted">Pelajar kelas XII-7. Menulis resep sederhana dan tips memasak untuk pemula.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontak">
+      <h2>Kontak</h2>
+      <div class="card">
+        <p class="muted">Punya pertanyaan atau ingin mengirimkan foto masakanmu? Hubungi melalui email: <strong>masakasik@example.com</strong> atau isi form di bawah (non-functional demo).</p>
+        <form style="display:grid;gap:8px;margin-top:8px">
+          <input placeholder="Nama" style="padding:8px;border-radius:8px;border:1px solid #eee"/>
+          <input placeholder="Email" style="padding:8px;border-radius:8px;border:1px solid #eee"/>
+          <textarea placeholder="Pesan" rows="4" style="padding:8px;border-radius:8px;border:1px solid #eee"></textarea>
+          <button type="button" class="btn">Kirim</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      © 2025 Masak Asik • Dibuat oleh Annisa Nur Aprillianti • Kelas XII-7
+    </footer>
+  </main>
+
+</body>
+</html>
