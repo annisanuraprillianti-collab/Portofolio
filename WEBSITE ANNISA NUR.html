@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annisa Nur Aprillianti | Portofolio</title>
+    <!-- Tailwind CSS untuk styling modern -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons untuk ikon estetik -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #f0f7ff; /* Latar Belakang Biru Soft */
+        }
+        .soft-blue-gradient {
+            background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 100%);
+        }
+        .nav-link:hover {
+            color: #3b82f6;
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(191, 219, 254, 0.4);
+        }
+        /* Custom scrollbar untuk nuansa biru */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #bfdbfe;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3b82f6;
+        }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <!-- 1. Header & Navigasi -->
+    <header class="fixed w-full top-0 z-50 bg-white/80 backdrop-blur-md border-b border-blue-100">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-600 tracking-tight">
+                Annisa<span class="text-blue-400">.</span>
+            </div>
+            <nav class="hidden md:flex space-x-8 font-medium">
+                <a href="#home" class="nav-link">Beranda</a>
+                <a href="#about" class="nav-link">Tentang</a>
+                <a href="#skills" class="nav-link">Keahlian</a>
+                <a href="#portfolio" class="nav-link">Karya</a>
+                <a href="#contact" class="nav-link">Kontak</a>
+            </nav>
+            <button class="md:hidden text-blue-600" id="menu-btn">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white px-6 py-4 border-b border-blue-100 flex flex-col space-y-4">
+            <a href="#home" class="nav-link">Beranda</a>
+            <a href="#about" class="nav-link">Tentang</a>
+            <a href="#skills" class="nav-link">Keahlian</a>
+            <a href="#portfolio" class="nav-link">Karya</a>
+            <a href="#contact" class="nav-link">Kontak</a>
+        </div>
+    </header>
+
+    <!-- 2. Beranda (Home) -->
+    <section id="home" class="pt-32 pb-20 px-6 soft-blue-gradient min-h-screen flex items-center">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+            <div class="md:w-1/2 space-y-6 text-center md:text-left">
+                <div class="inline-block px-4 py-1 bg-blue-100 text-blue-600 rounded-full text-sm font-semibold mb-2">
+                    Halo, Selamat Datang! 👋
+                </div>
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight">
+                    Saya <span class="text-blue-600">Annisa Nur Aprillianti</span>
+                </h1>
+                <p class="text-xl text-slate-600 leading-relaxed">
+                    Seorang siswi SMAN 1 Subang yang mencintai dunia <span class="font-semibold text-blue-500 underline decoration-2">Kuliner</span> & <span class="font-semibold text-blue-500 underline decoration-2">Literasi</span>.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4">
+                    <a href="#portfolio" class="px-8 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 shadow-lg shadow-blue-200 transition text-center">
+                        Lihat Portofolio
+                    </a>
+                    <a href="#contact" class="px-8 py-3 border-2 border-blue-600 text-blue-600 rounded-xl font-semibold hover:bg-blue-50 transition text-center">
+                        Hubungi Saya
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 mt-12 md:mt-0 flex justify-center relative">
+                <div class="w-64 h-64 md:w-80 md:h-80 bg-blue-400 rounded-[3rem] overflow-hidden shadow-2xl rotate-3 hover:rotate-0 transition duration-500 flex items-center justify-center border-4 border-white">
+                    <div class="w-full h-full flex items-center justify-center bg-blue-200 text-blue-600">
+                         <i data-lucide="user" size="100"></i>
+                    </div>
+                </div>
+                <div class="absolute -bottom-6 -left-6 w-24 h-24 bg-blue-200 rounded-full blur-2xl opacity-60"></div>
+                <div class="absolute -top-6 -right-6 w-32 h-32 bg-blue-300 rounded-full blur-2xl opacity-60"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Tentang Saya (About Me) -->
+    <section id="about" class="py-24 px-6 bg-white">
+        <div class="container mx-auto max-w-4xl">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Tentang Saya</h2>
+                <div class="w-20 h-1.5 bg-blue-500 mx-auto rounded-full"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-semibold text-blue-600">Riwayat Pendidikan</h3>
+                    <ul class="space-y-4 text-slate-600">
+                        <li class="flex gap-4 items-start">
+                            <div class="mt-1 bg-blue-100 p-1.5 rounded-lg"><i data-lucide="school" class="text-blue-600 size-5"></i></div>
+                            <div>
+                                <p class="font-bold text-slate-800 text-sm">SDN DANGDEUR 2 SUBANG</p>
+                                <p class="text-xs">Sekolah Dasar</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4 items-start">
+                            <div class="mt-1 bg-blue-100 p-1.5 rounded-lg"><i data-lucide="building" class="text-blue-600 size-5"></i></div>
+                            <div>
+                                <p class="font-bold text-slate-800 text-sm">SMPN 1 PAGADEN</p>
+                                <p class="text-xs">Sekolah Menengah Pertama</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4 items-start">
+                            <div class="mt-1 bg-blue-100 p-1.5 rounded-lg"><i data-lucide="graduation-cap" class="text-blue-600 size-5"></i></div>
+                            <div>
+                                <p class="font-bold text-slate-800 text-sm">SMAN 1 SUBANG</p>
+                                <p class="text-xs">Sekolah Menengah Atas (Aktif)</p>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-semibold text-blue-600 pt-4">Pengalaman Organisasi</h3>
+                    <ul class="space-y-4 text-slate-600">
+                        <li class="flex gap-4 items-start">
+                            <div class="mt-1 bg-blue-100 p-1.5 rounded-lg"><i data-lucide="users" class="text-blue-600 size-5"></i></div>
+                            <div>
+                                <p class="font-bold text-slate-800 text-sm">Ekstrakurikuler PMR</p>
+                                <p class="text-xs">Anggota Aktif Palang Merah Remaja</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4 items-start">
+                            <div class="mt-1 bg-blue-100 p-1.5 rounded-lg"><i data-lucide="heart-pulse" class="text-blue-600 size-5"></i></div>
+                            <div>
+                                <p class="font-bold text-slate-800 text-sm">Panitia Donor Darah</p>
+                                <p class="text-xs">Koordinasi acara kesehatan di sekolah</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-blue-50 p-8 rounded-3xl border border-blue-100 shadow-sm relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-10">
+                        <i data-lucide="quote" size="64"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-blue-600">Nilai & Minat</h3>
+                    <p class="text-slate-600 mb-6 italic leading-relaxed">
+                        "Saya percaya bahwa memasak adalah seni menciptakan kebahagiaan, sedangkan membaca adalah jendela untuk melihat dunia yang lebih luas."
+                    </p>
+                    <div class="p-5 bg-white rounded-2xl flex items-center gap-4 border border-blue-100 shadow-sm">
+                        <div class="p-3 bg-blue-600 text-white rounded-xl">
+                            <i data-lucide="award"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-slate-500 font-medium uppercase tracking-wider">Keahlian Utama</p>
+                            <p class="font-bold text-blue-600">Mahir dalam Memasak</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Keahlian (Skills) -->
+    <section id="skills" class="py-24 px-6 bg-slate-50">
+        <div class="container mx-auto max-w-5xl">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4 text-slate-800">Keahlian Saya</h2>
+                <div class="w-20 h-1.5 bg-blue-500 mx-auto rounded-full"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Hard Skills -->
+                <div class="space-y-6">
+                    <h3 class="text-xl font-bold flex items-center gap-2">
+                        <i data-lucide="code" class="text-blue-500"></i> Hard Skills
+                    </h3>
+                    <div class="space-y-5">
+                        <div class="bg-white p-4 rounded-2xl shadow-sm border border-blue-50 text-sm">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">HTML & CSS</span>
+                                <span class="text-blue-500 font-bold">80%</span>
+                            </div>
+                            <div class="w-full bg-blue-100 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="bg-white p-4 rounded-2xl shadow-sm border border-blue-50 text-sm">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Desain Grafis (Canva)</span>
+                                <span class="text-blue-500 font-bold">90%</span>
+                            </div>
+                            <div class="w-full bg-blue-100 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Soft Skills -->
+                <div class="space-y-6">
+                    <h3 class="text-xl font-bold flex items-center gap-2">
+                        <i data-lucide="brain" class="text-blue-500"></i> Soft Skills
+                    </h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-6 bg-white rounded-3xl border border-blue-100 text-center card-hover">
+                            <i data-lucide="message-square" class="mx-auto text-blue-500 mb-3 size-8"></i>
+                            <span class="font-semibold text-sm">Komunikasi</span>
+                        </div>
+                        <div class="p-6 bg-white rounded-3xl border border-blue-100 text-center card-hover">
+                            <i data-lucide="users-2" class="mx-auto text-blue-500 mb-3 size-8"></i>
+                            <span class="font-semibold text-sm">Kerjasama Tim</span>
+                        </div>
+                        <div class="p-6 bg-white rounded-3xl border border-blue-100 text-center card-hover">
+                            <i data-lucide="palette" class="mx-auto text-blue-500 mb-3 size-8"></i>
+                            <span class="font-semibold text-sm">Kreativitas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Portofolio & 6. Prestasi -->
+    <section id="portfolio" class="py-24 px-6 bg-white">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Karya & Prestasi</h2>
+                <div class="w-20 h-1.5 bg-blue-500 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="group bg-slate-50 rounded-[2.5rem] overflow-hidden border border-blue-50 card-hover shadow-sm">
+                    <div class="h-56 bg-blue-200 flex items-center justify-center text-blue-500 relative overflow-hidden">
+                        <i data-lucide="utensils" size="48" class="group-hover:scale-125 transition duration-500"></i>
+                    </div>
+                    <div class="p-8">
+                        <h4 class="font-bold text-xl mb-2">Resep Nusantara</h4>
+                        <p class="text-slate-600 text-sm mb-5">Eksperimen berbagai masakan tradisional buatan rumah.</p>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-600 text-[10px] font-bold rounded-lg uppercase tracking-widest">Memasak</span>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="group bg-slate-50 rounded-[2.5rem] overflow-hidden border border-blue-50 card-hover shadow-sm">
+                    <div class="h-56 bg-blue-300 flex items-center justify-center text-blue-100 relative overflow-hidden">
+                        <i data-lucide="book-marked" size="48" class="group-hover:scale-125 transition duration-500"></i>
+                    </div>
+                    <div class="p-8">
+                        <h4 class="font-bold text-xl mb-2">Log Buku Bacaan</h4>
+                        <p class="text-slate-600 text-sm mb-5">Kumpulan ringkasan buku yang telah selesai dibaca.</p>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-600 text-[10px] font-bold rounded-lg uppercase tracking-widest">Membaca</span>
+                    </div>
+                </div>
+
+                <!-- Prestasi -->
+                <div class="bg-blue-600 rounded-[2.5rem] overflow-hidden shadow-2xl shadow-blue-200 text-white card-hover p-8 flex flex-col justify-center text-center relative">
+                    <div class="mb-6 flex justify-center">
+                        <div class="p-5 bg-white/20 rounded-3xl backdrop-blur-sm">
+                            <i data-lucide="trophy" size="48"></i>
+                        </div>
+                    </div>
+                    <h4 class="font-bold text-2xl mb-2 text-white">Lomba Memasak</h4>
+                    <p class="text-blue-100 mb-6 text-sm italic">"Peserta aktif dalam lomba kuliner tingkat daerah."</p>
+                    <div class="text-[10px] font-bold py-2 px-4 bg-white/20 rounded-full border border-white/30 tracking-[0.2em] uppercase">
+                        🎖️ Prestasi Kuliner
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Kontak -->
+    <section id="contact" class="py-24 px-6 bg-blue-50">
+        <div class="container mx-auto max-w-4xl">
+            <div class="bg-white rounded-[3.5rem] shadow-2xl shadow-blue-100 overflow-hidden flex flex-col md:flex-row border border-white">
+                <div class="md:w-1/2 bg-blue-600 p-12 text-white flex flex-col justify-between">
+                    <div>
+                        <h2 class="text-3xl font-bold mb-6">Ayo Hubungi!</h2>
+                        <p class="text-blue-100 mb-8 leading-relaxed">Silakan hubungi saya untuk kolaborasi atau sekadar berbagi pengalaman!</p>
+                        <div class="space-y-6">
+                            <div class="flex items-center gap-4">
+                                <div class="p-2 bg-white/10 rounded-lg"><i data-lucide="mail" class="size-5"></i></div>
+                                <span class="text-sm">annisanuraprillianti@gmail.com</span>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="p-2 bg-white/10 rounded-lg"><i data-lucide="message-circle" class="size-5"></i></div>
+                                <span class="text-sm">0831 7266 3795</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 p-12">
+                    <form id="contact-form" class="space-y-5">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-widest text-slate-400 mb-2">Nama</label>
+                            <input type="text" required class="w-full px-5 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-widest text-slate-400 mb-2">Pesan</label>
+                            <textarea rows="4" required class="w-full px-5 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-4 bg-blue-600 text-white font-bold rounded-2xl hover:bg-blue-700 transition shadow-lg shadow-blue-200 flex items-center justify-center gap-2 group">
+                            Kirim Pesan
+                            <i data-lucide="send" class="size-4 group-hover:translate-x-1 transition"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Footer -->
+    <footer class="py-16 bg-white border-t border-slate-100">
+        <div class="container mx-auto px-6 text-center">
+            <div class="text-3xl font-bold text-blue-600 mb-4 tracking-tighter">Annisa<span class="text-blue-400">.</span></div>
+            <p class="text-slate-400 text-sm mb-10 max-w-sm mx-auto">"Berdedikasi untuk terus belajar dan mengabdi di masyarakat."</p>
+            <div class="text-slate-300 text-[10px] font-bold uppercase tracking-[0.3em]">
+                &copy; <span id="year"></span> Annisa Nur Aprillianti
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        document.getElementById('year').textContent = new Date().getFullYear();
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        document.getElementById('contact-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const box = document.createElement('div');
+            box.className = 'fixed top-10 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white px-8 py-4 rounded-3xl shadow-2xl z-[100] font-bold flex items-center gap-3 animate-bounce text-center';
+            box.innerHTML = '<i data-lucide="check-circle-2"></i> Terima kasih! Pesan telah terkirim.';
+            document.body.appendChild(box);
+            lucide.createIcons();
+            setTimeout(() => {
+                box.classList.add('opacity-0', 'transition', 'duration-1000');
+                setTimeout(() => box.remove(), 1000);
+            }, 3000);
+            e.target.reset();
+        });
+    </script>
+</body>
+</html>
